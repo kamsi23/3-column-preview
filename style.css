@@ -1,0 +1,125 @@
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Big+Shoulders:opsz,wght@10..72,100..900&display=swap");
+:root {
+  --Gold-500: hsl(31, 77%, 52%);
+  --Cyan-800: hsl(184, 100%, 22%);
+  --Green-950: hsl(179, 100%, 13%);
+
+  --paragraphs: hsla(0, 0%, 100%, 0.75);
+  --background-headings-buttons: hsl(0, 0%, 95%);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*   
+
+ */
+body {
+  max-width: 1440px;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: var(--background-headings-buttons);
+}
+.card {
+  width: 50%;
+  margin: 150px auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+p {
+  color: var(--paragraphs);
+  font-size: 15px;
+}
+h2 {
+  color: var(--background-headings-buttons);
+  font-family: "Big Shoulders", sans-serif;
+  font-size: 30px;
+}
+button {
+  background-color: var(--background-headings-buttons);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 18px;
+  font-size: 15px;
+}
+.car {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: start;
+}
+
+.cars {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+}
+.sedan {
+  background-color: var(--Gold-500);
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 2px;
+}
+.sedan button {
+  color: var(--Gold-500);
+}
+.suvs {
+  background-color: var(--Cyan-800);
+}
+.suvs button {
+  color: var(--Cyan-800);
+}
+.luxury {
+  background-color: var(--Green-950);
+  border-top-right-radius: 2px;
+  border-bottom-right-radius: 5px;
+}
+.luxury button {
+  color: var(--Green-950);
+}
+
+.luxury button:hover {
+  background-color: var(--Green-950);
+  color: var(--paragraphs);
+  border: 2px solid var(--paragraphs);
+  cursor: pointer;
+}
+.suvs button:hover {
+  background-color: var(--Cyan-800);
+  color: var(--paragraphs);
+  border: 2px solid var(--paragraphs);
+  cursor: pointer;
+}
+.sedan button:hover {
+  background-color: var(--Gold-500);
+  color: var(--paragraphs);
+  border: 2px solid var(--paragraphs);
+  cursor: pointer;
+}
+br {
+  display: none;
+}
+/* =================== */
+@media (max-width: 480px) {
+  .card {
+    width: 90%;
+    grid-template-columns: 1fr;
+    margin: 50px auto;
+  }
+  br {
+    display: block;
+  }
+  .car {
+    padding: 50px;
+  }
+  .sedan {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+  }
+  .luxury {
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
